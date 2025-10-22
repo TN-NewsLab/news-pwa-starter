@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>News PWA Starter</title>
+  <meta name="description" content="シンプルなニュースまとめPWAの雛形">
+  <meta name="theme-color" content="#0f172a">
+  <!-- iOS PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NewsPWA">
+  <link rel="apple-touch-icon" href="images/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="images/icon-192.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="appbar">
+    <h1>News PWA Starter</h1>
+    <button id="reloadBtn" aria-label="reload">⟲</button>
+  </header>
+  <main id="app">
+    <section class="instructions" id="a2hsTip">
+      <h2>ホーム画面に追加（iPhone）</h2>
+      <ol>
+        <li>Safariでこのページを開く</li>
+        <li>共有ボタン → <strong>ホーム画面に追加</strong></li>
+        <li>ホームから起動するとアプリ風に使えます</li>
+      </ol>
+    </section>
+    <section class="status" id="status"></section>
+    <section id="newsList" class="cards"></section>
+  </main>
+
+  <template id="newsCard">
+    <article class="card">
+      <div class="meta">
+        <span class="source"></span>
+        <time class="time"></time>
+      </div>
+      <h3 class="title"></h3>
+      <p class="summary"></p>
+      <p class="actions">
+        <a class="link" target="_blank" rel="noopener">記事を開く ↗</a>
+      </p>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>
