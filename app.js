@@ -17,6 +17,11 @@ async function loadNews() {
   try {
     const res = await fetch('./data/news.json', { cache: 'no-store' });
     const data = await res.json();
+    // ★ まずピックアップ（featured）があれば先に描画
+    if (data.featured && data.featured.length > 0) {
+      renderList(data.featured, true);
+    }
+    // ★ 次に通常の記事
     renderList(data.articles || []);
     statusEl.textContent = '最新データを表示中';
   } catch (e) {
@@ -25,20 +30,21 @@ async function loadNews() {
   }
 }
 
-function renderList(items) {
-  listEl.innerHTML = '';
-  if (!items.length) {
-    listEl.innerHTML = '<p style="opacity:.8">記事がありません。</p>';
-    return;
-  }
+function renderList(items, isFeatured = false) {
+  if (!items.length) return;
+
   for (const it of items) {
     const node = cardTpl.content.cloneNode(true);
     node.querySelector('.source').textContent = it.source || '';
-    node.querySelector('.time').textContent = fmtTime(it.published_at || '');
+    node.querySelector('.time').textContent = fmtTime(it.date || it.published_at || '');
     node.querySelector('.title').textContent = it.title || '';
-    //node.querySelector('.summary').innerHTML = (it.summary || '').replace(/\n/g, '<br>');
-    const summaryEl = node.querySelector('.summary');
-    summaryEl.innerHTML = (it.summary || '').replace(/\n/g, '<br>');
+    node.querySelector('.summary').innerHTML = (it.summary || '').replace(/\n/g, '<br>');
+
+    // ★ ピックアップには目立つラベルをつける
+    if (isFeatured) {
+      node.querySelector('.title').insertAdjacentHTML('afterbegin', '🔥 ');
+    }
+
     const a = node.querySelector('.link');
     a.href = it.url || '#';
     listEl.appendChild(node);

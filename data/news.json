@@ -1,19 +1,43 @@
 {
   "last_updated": "2025-10-19T12:00:00+09:00",
+   "featured": [
+    {
+      "title": "今日のピックアップ：AI市場の新潮流",
+      "summary": "世界のAI投資が前年比で急増。\n主要企業は生成AIの応用範囲を拡大中。",
+      "date": "2025-10-23",
+      "category": "AI",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.com/"
+    }
+  ],
   "articles": [
     {
-      "title": "【日本市況】日経平均反落、「高市トレード」一服－長期金利上昇",
-      "source": "Bloomberg",
-      "url": "https://www.bloomberg.co.jp/news/articles/2025-10-22/T4I82JGP9VCZ00?srnd=cojp-v2",
-      "published_at": "2025-10-22T09:57:00+09:00",
-      "summary": "・日経平均株価は反落し、「高市トレード」に一服感が見られた。\n・日本の長期金利が上昇し、新発10年物国債利回りは1.665%となった。\n・これまで高市新政権への期待から買われていたが、利益確定売りや金利上昇が重しとなった。"
+      "title": "日本経済、緩やかな回復基調",
+      "summary": "最新の景気指数が3か月連続で上昇。\n企業の設備投資も堅調。",
+      "date": "2025-10-23",
+      "category": "経済",
+      "source": "NHK",
+      "url": "https://www.nhk.or.jp/"
     },
     {
-      "title": "テストニュース",
-      "source": "これはGitHub更新テストです。",
-      "url": "https://example.com/trustworthy-ai",
-      "published_at": "2025-10-23",
-      "summary": ""
+      "title": "生成AIの透明性議論が活発化",
+      "summary": "企業や研究機関が透明性の国際基準策定に向けて動き出した。",
+      "date": "2025-10-22",
+      "category": "AI",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/"
     }
   ]
 }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
