@@ -31,7 +31,8 @@ main { max-width: 880px; margin: 0 auto; padding: 16px; }
 }
 .card .meta { display:flex; gap:8px; font-size:12px; color:var(--muted); }
 .card .title { font-size:18px; margin:4px 0; }
-.card .summary { color:#cbd5e1; font-size:14px; line-height:1.5; }
+/*.card .summary { color:#cbd5e1; font-size:14px; line-height:1.5; }*/
+.card .summary { white-space: pre-wrap; color:#cbd5e1; font-size:14px; line-height:1.5; }
 .card .actions { margin-top:auto; }
 .card .actions .link { color: var(--accent); text-decoration: none; }
 
