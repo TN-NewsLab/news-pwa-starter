@@ -36,7 +36,9 @@ function renderList(items) {
     node.querySelector('.source').textContent = it.source || '';
     node.querySelector('.time').textContent = fmtTime(it.published_at || '');
     node.querySelector('.title').textContent = it.title || '';
-    node.querySelector('.summary').innerHTML = (it.summary || '').replace(/\n/g, '<br>');
+    //node.querySelector('.summary').innerHTML = (it.summary || '').replace(/\n/g, '<br>');
+    const summaryEl = node.querySelector('.summary');
+    summaryEl.innerHTML = (it.summary || '').replace(/\n/g, '<br>');
     const a = node.querySelector('.link');
     a.href = it.url || '#';
     listEl.appendChild(node);
