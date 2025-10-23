@@ -1,0 +1,19 @@
+{
+  "last_updated": "2025-10-19T12:00:00+09:00",
+  "articles": [
+    {
+      "title": "【日本市況】日経平均反落、「高市トレード」一服－長期金利上昇",
+      "source": "Bloomberg",
+      "url": "https://www.bloomberg.co.jp/news/articles/2025-10-22/T4I82JGP9VCZ00?srnd=cojp-v2",
+      "published_at": "2025-10-22T09:57:00+09:00",
+      "summary": "・日経平均株価は反落し、「高市トレード」に一服感が見られた。\n・日本の長期金利が上昇し、新発10年物国債利回りは1.665%となった。\n・これまで高市新政権への期待から買われていたが、利益確定売りや金利上昇が重しとなった。"
+    },
+    {
+      "title": "テストニュース",
+      "source": "これはGitHub更新テストです。",
+      "url": "https://example.com/trustworthy-ai",
+      "published_at": "2025-10-23",
+      "summary": ""
+    }
+  ]
+}
